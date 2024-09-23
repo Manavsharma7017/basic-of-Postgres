@@ -1,9 +1,10 @@
 import { Client } from "pg";
-
+import * as dotenv from "dotenv";
+ dotenv.config();
 
 async function insert(){
     const client2=new Client({
-    connectionString:`postgresql://test_owner:8a6eHJRgvxsj@ep-curly-frog-a53ymnf4.us-east-2.aws.neon.tech/test?sslmode=require`
+    connectionString:process.env.POSTGRES_URL
 })
 try{
     await client2.connect()

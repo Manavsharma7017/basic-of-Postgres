@@ -1,8 +1,8 @@
 import { Client } from 'pg'
- 
+import * as dotenv from "dotenv";
+dotenv.config();
 const client = new Client({
-  connectionString:'postgresql://test_owner:8a6eHJRgvxsj@ep-curly-frog-a53ymnf4.us-east-2.aws.neon.tech/test?sslmode=require',
-  
+  connectionString:process.env.POSTGRES_URL
 })
 
 async function somethhing() {
