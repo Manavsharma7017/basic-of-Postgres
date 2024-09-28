@@ -1,1 +1,1 @@
-{"root":["./src/forneky.ts","./src/index.ts","./src/insert.ts","./src/show.ts"],"version":"5.6.2"}
+{"root":["./src/pg-postgrss/forneky.ts","./src/pg-postgrss/index.ts","./src/pg-postgrss/insert.ts","./src/pg-postgrss/show.ts"],"version":"5.6.2"}

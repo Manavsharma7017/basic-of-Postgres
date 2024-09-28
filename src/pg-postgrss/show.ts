@@ -10,7 +10,7 @@ async function show(){
     const result3=await client3.query(`
         SELECT * FROM users
         `)
-        console.log(result3)
+        console.log(result3.rows)
 }catch(e){
     console.log(e)
 }
