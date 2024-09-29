@@ -12,3 +12,22 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  username String
+  lastname String
+  password String
+  todo     todo[]
+}
+
+model todo {
+  id          Int     @id @default(autoincrement())
+  user        User    @relation(fields: [userId], references: [id])
+  userid      Int
+  tittle      String
+  done        Boolean @default(false)
+  description String?
+  userId      Int
+}
